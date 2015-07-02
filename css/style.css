@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+body{
+    background: #1b97d0;
+}
+
+.stage{
+    display: block;
+    position:relative;
+    overflow: hidden;
+    background: #ffffff;
+}
+div.stage{
+    width:1024px;
+    height:768px;
+    border:1px solid #000000;
+}
+
+.sprite{
+    position:absolute;
+}
+
+#back{
+    background:#000000;
+}
