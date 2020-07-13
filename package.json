@@ -1,0 +1,29 @@
+{
+  "name": "animatepractice",
+  "version": "2.0.0",
+  "description": "animate practice",
+  "main": "./bin/index.js",
+  "scripts": {
+    "start": "node --experimental-modules ./bin/index.js",
+    "dev": "export DEBUG=* & node --inspect --experimental-modules ./bin/index.js",
+    "dev:server": "export DEBUG=* & npx supervisor --experimental-modules --inspect ./bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bravechen/animatePractice.git"
+  },
+  "author": "Brave Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bravechen/animatePractice/issues"
+  },
+  "homepage": "https://github.com/Bravechen/animatePractice#readme",
+  "dependencies": {
+    "cookie-parse": "^0.4.0",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "http-errors": "^1.8.0",
+    "morgan": "^1.10.0"
+  }
+}
