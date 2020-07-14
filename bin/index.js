@@ -4,10 +4,10 @@
  * @version ${projectVersion}
  */
 //============================================================
-import app from './server/app.js';
+import app from '../server/app.js';
 import http from 'http';
 import debug from 'debug';
-import config from '../server.config';
+import config from '../server.config.js';
 //============================================================
 const serverDebug = debug('server');
 const errDebug = debug('error');
@@ -15,7 +15,7 @@ const errDebug = debug('error');
 /**
  * @private
  * @description Normalize a port into a number, string, or false.
- * @param {string|number} val 
+ * @param {string|number} val
  */
 function normalizePort(val) {
   var port = parseInt(val, 10);
@@ -36,7 +36,7 @@ function normalizePort(val) {
 /**
  * @private
  * @description 设置端口号
- * @param {*} param0 
+ * @param {*} param0
  */
 function setPort({ app, port }) {
   serverDebug('set port', port);
@@ -47,7 +47,7 @@ function setPort({ app, port }) {
 /**
  * @private
  * @description 创建并启动服务器
- * @param {*} param0 
+ * @param {*} param0
  */
 function createServer({ app, port }) {
   const server = http.createServer(app);
@@ -60,7 +60,7 @@ function createServer({ app, port }) {
 /**
  * @private
  * @description 添加服务器事件
- * @param {*} param0 
+ * @param {*} param0
  */
 function addServerEvents({ server }) {
   serverDebug('add server events');
@@ -79,7 +79,7 @@ const { server } = [
 ].reduce(
   function(prev, item) {
     return Object.assign({}, prev, item(prev) || {});
-  }, 
+  },
   {
     app,
     port: normalizePort(config.port)
@@ -89,7 +89,7 @@ const { server } = [
 /**
  * @private
  * @description 错误事件
- * @param {*} err 
+ * @param {*} err
  */
 function onError(err) {
   errDebug('happer error', err);
@@ -116,4 +116,4 @@ function onListerning() {
 }
 //============================================================
 
-export default {};
+// export default {};

@@ -1,7 +1,7 @@
-const path = require('path');
-const hbsSettings = require('./plugins/hbsSetting');
+import path from 'path';
+import hbsSettings from './plugins/hbsSetting.js';
 
-const serverConfig = {
+export default {
   port: process.env.PORT || '3000',
   viewsDir: path.join(process.cwd(), './web/views'),
   staticDirs: [{ route: '/static', dir: path.join(process.cwd(), './web/static') }],
@@ -9,11 +9,9 @@ const serverConfig = {
     engine: 'hbs',
     defaultLayout: './layouts/layout',
     partials: [
-      path.join(process.cwd(), './web/views/components'), 
+      path.join(process.cwd(), './web/views/components'),
       path.join(process.cwd(), './web/views/templates')
     ],
     settings: [hbsSettings]
   }
 };
-
-module.exports = serverConfig;

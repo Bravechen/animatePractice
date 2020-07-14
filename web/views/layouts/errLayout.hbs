@@ -1,26 +1,16 @@
-{{!-- 通用和主站页面layout --}}
+{{!-- 错误页面通用模板 --}}
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="format-detection" content="telephone=no, email=no" />
-
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <title>{{title}}</title>
-  {{> cmnStyle}}
+  {{{_sections.metas}}}
+  <title>error</title>
   {{{_sections.styles}}}
 </head>
-
 <body>
   {{{body}}}
-  {{!-- {{> footer}} --}}
-
-  {{> cmnScript}}
   {{{_sections.scripts}}}
 </body>
-
 </html>

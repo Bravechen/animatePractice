@@ -3,8 +3,10 @@
   "version": "2.0.0",
   "description": "animate practice",
   "main": "./bin/index.js",
+  "type": "module",
   "scripts": {
     "start": "node --experimental-modules ./bin/index.js",
+    "dev:win": "set DEBUG=* & node --inspect --experimental-modules ./bin/index.js",
     "dev": "export DEBUG=* & node --inspect --experimental-modules ./bin/index.js",
     "dev:server": "export DEBUG=* & npx supervisor --experimental-modules --inspect ./bin/index.js"
   },
@@ -19,7 +21,7 @@
   },
   "homepage": "https://github.com/Bravechen/animatePractice#readme",
   "dependencies": {
-    "cookie-parse": "^0.4.0",
+    "cookie-parser": "~1.4.4",
     "debug": "^4.1.1",
     "express": "^4.17.1",
     "hbs": "^4.1.1",
