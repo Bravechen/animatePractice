@@ -1225,7 +1225,7 @@ const b = {
       function () {
         /* omitted long function */ }
     ),
-    /* config.plugin('html-home') */
+    /* config.plugin('html-homedao') */
     new HtmlWebpackPlugin({
       templateParameters: function () {
         /* omitted long function */ },
